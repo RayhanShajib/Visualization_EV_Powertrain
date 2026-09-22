@@ -1,4 +1,4 @@
-EV POWERTRAIN OPTIMISATION PROJECT
+# EV POWERTRAIN Visualization PROJECT
 
 #Introduction
 This project explores how an EV powertrain works and investigates ways to improve its efficiency.
