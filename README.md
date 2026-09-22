@@ -144,6 +144,37 @@ AC charging 0-100%(Usable) = Approx. 4 hour 16 minute
 
 <img width="800" height="600" alt="oSobgcMlYnns2PwhHLF6nqvhcVGvVHhfbh0Hodj5ZTU5mGYm1gDeecdZZcUys93eUCfOfEjXwMSrGfFUcsET865axTNW5xOmsi78qyL8UE4m_cKla8eIKu_l7VZyn3wQDLIaTQXhkt7JxmiGl1x4dPfk5Yfa5UQP68lYHwckXq8" src="https://github.com/user-attachments/assets/78ff5733-6049-4b06-b3f2-3c41d61ac272" />
 
+# Drivetrain and Regeneration (Gearbox, Differential, Braking Energy)
+<img width="970" height="437" alt="Screenshot 2026-09-22 153540" src="https://github.com/user-attachments/assets/52005354-9143-4462-bd2f-300e57a57551" />
+.
+<img width="707" height="352" alt="Screenshot 2026-09-22 154234" src="https://github.com/user-attachments/assets/2723b456-aa3c-4fc0-95b5-97856215d381" />
+
+## Drivetrain and regeneration — Polestar 4
+
+```mermaid
+flowchart LR
+    A[Battery and inverter<br/>DC to AC] --> B[Motor<br/>343 Nm at shaft]
+    B --> C[Reduction gearbox<br/>Ratio 13.8:1]
+    C --> D[Differential<br/>Splits torque L/R]
+    D --> E[Half-shaft and CV joint<br/>Allows suspension angle]
+    E --> F[Wheel hub<br/>~4,700 Nm here]
+```
+
+### Driving: battery to wheels
+1. **Battery and inverter** — DC converted to AC
+2. **Motor** — spins, 343 Nm at shaft
+3. **Reduction gearbox** — 13.8:1 ratio, torque × 13.8 ≈ 4,730 Nm
+4. **Differential** — splits torque left/right
+5. **Half-shaft and CV joint** — carries torque to each wheel, flexes with suspension
+6. **Wheel hub** — ~4,700 Nm here, turns the wheel
+
+### Regen braking: wheels to battery
+1. **Wheel hub** — spun by the car's momentum
+2. **Half-shaft and CV joint** — carries that rotation back
+3. **Differential** — recombines rotation from both wheels
+4. **Reduction gearbox** — wheel speed × 13.8 = generator speed at motor
+5. **Motor** — acts as generator, produces AC
+6. **Battery and inverter** — AC converted back to DC, stored in battery
 
 # Cooling, Control and Auxiliary Power
 
