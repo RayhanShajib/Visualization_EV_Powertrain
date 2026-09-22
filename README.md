@@ -143,6 +143,67 @@ AC charging 0-100%(Usable) = Approx. 4 hour 16 minute
 # PMSM Motor:
 
 <img width="800" height="600" alt="oSobgcMlYnns2PwhHLF6nqvhcVGvVHhfbh0Hodj5ZTU5mGYm1gDeecdZZcUys93eUCfOfEjXwMSrGfFUcsET865axTNW5xOmsi78qyL8UE4m_cKla8eIKu_l7VZyn3wQDLIaTQXhkt7JxmiGl1x4dPfk5Yfa5UQP68lYHwckXq8" src="https://github.com/user-attachments/assets/78ff5733-6049-4b06-b3f2-3c41d61ac272" />
+# Cooling, Control and Auxiliary Power
+
+## Cooling System
+
+The Polestar 4 uses a thermal management system to control the temperature of the battery, inverter and electric motors. Cooling is important because these components generate heat during driving and fast charging.
+
+The system uses coolant, pumps and heat exchangers to move heat between different parts of the vehicle.
+
+Main purposes:
+- Keep the battery at a suitable operating temperature
+- Prevent the motor and inverter from overheating
+- Support fast charging
+- Improve efficiency and battery life
+
+
+## Control System
+
+The control system manages the flow of power between the battery, inverter and motor.
+
+Basic power flow:
+
+Battery → Controller/Inverter → Motor → Wheels
+
+The control system receives information from sensors and decides how much power should be delivered to the motor. It also controls regenerative braking and thermal management.
+
+
+## Auxiliary Power
+
+Not all battery energy is used to move the vehicle. Some energy is required by auxiliary systems.
+
+Examples:
+- Cabin heating and air conditioning
+- Cooling pumps and fans
+- Lights
+- Infotainment and displays
+- Control electronics
+- 12 V electrical system
+
+These auxiliary loads increase total energy consumption and can reduce the driving range.
+
+
+## Energy Flow
+
+High-Voltage Battery
+        │
+        ├──→ Inverter → Motor → Wheels
+        │
+        ├──→ Cooling / Thermal Management
+        │
+        ├──→ Heating / Air Conditioning
+        │
+        └──→ DC-DC Converter → 12 V Systems
+
+
+## Possible Efficiency Improvements
+
+- Better control of battery temperature
+- Reduce unnecessary operation of cooling pumps and fans
+- Use efficient cabin heating and cooling
+- Precondition the battery and cabin while connected to a charger
+- Optimize auxiliary power consumption
 
 
 # Polestar 4
