@@ -40,15 +40,15 @@ Sadia: Study cooling, control and auxiliary power.
 
 Everyone: Combine findings and diagrams.
 
-Completed Work:
+# Completed Work:
 Battery - the cars main battery is a lithium-ion pack made of 110 smaller cells connected together. Cells are connected in series so the voltages add up. Each cell is about 3.7 volt makes the whole pack equivalent of 407 volt. A higher voltage means the same power can be delivered with less current which keeps cables and components smaller and cooler. 
 Cells = 110
-Nominal voltage = 407 V 
-Total capacity = 100 kWh
-Usable capacity = 94 kWh
-DC charging (10% - 80%) = 135 kW
-DC charging(Max.) = 200 kW
-AC charging = 22 kW(Max.)
+* Nominal voltage = 407 V 
+* Total capacity = 100 kWh
+* Usable capacity = 94 kWh
+* DC charging (10% - 80%) = 135 kW
+* DC charging(Max.) = 200 kW
+* AC charging = 22 kW(Max.)
 Separate battery = 12 V (separate small battery that runs the lights, screens and charging port controls. The 407V pack does not power that directly.)
 Why is DC charging faster than AC charging- with DC the conversion from AC to DC is done in the big external charger, so the energy goes directly into the battery. With AC, the cars own smaller onboard charger has do the conversion, so the power is limited. 
 Mathematical Calculations:
