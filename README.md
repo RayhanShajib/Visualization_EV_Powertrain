@@ -23,23 +23,6 @@ Specifications and data sources:
 Powertrain diagrams, a baseline model or analysis, evaluation of efficiency improvements, and documented results.
 
 
-
-WEEKLY UPDATES
-
-Week 1: Understanding the Powertrain
-Dates: ____________________
-
-Planned Work
-Nayeem: Study charging, battery and BMS.
-
-Rayhan: Study inverter and motor operation.
-
-Shahriar: Study drivetrain and regenerative braking.
-
-Sadia: Study cooling, control and auxiliary power.
-
-Everyone: Combine findings and diagrams.
-
 # Completed Work:
 Battery - the cars main battery is a lithium-ion pack made of 110 smaller cells connected together. Cells are connected in series so the voltages add up. Each cell is about 3.7 volt makes the whole pack equivalent of 407 volt. A higher voltage means the same power can be delivered with less current which keeps cables and components smaller and cooler. 
 Cells = 110
