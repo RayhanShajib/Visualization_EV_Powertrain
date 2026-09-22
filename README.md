@@ -84,10 +84,10 @@ DC charging 10-80% = Approx. 31 minute
 AC charging 0-100%(Usable) = Approx. 4 hour 16 minute
 
 
-
+Inverter and Motor
 
 ```text
-                 ELECTRIC VEHICLE POWERTRAIN
+                 Inverter and Motor
                          
         ┌───────────────────┐
         │   HIGH-VOLTAGE    │
