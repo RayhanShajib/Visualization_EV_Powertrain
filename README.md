@@ -194,11 +194,8 @@ High-Voltage Battery
         │
         ├──→ Cooling / Thermal Management
         │
-        ├──→ Heating / Air Conditioning
-        │
-        └──→ DC-DC Converter → 12 V Systems
-
-
+        │──→ Heating / Air Conditioning
+        
 ## Possible Efficiency Improvements
 
 - Better control of battery temperature
