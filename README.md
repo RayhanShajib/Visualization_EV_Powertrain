@@ -182,6 +182,7 @@ Examples:
 - Infotainment and displays
 - Control electronics
 - 12 V electrical system
+- Separate battery = 12 V (separate small battery that runs the lights, screens and charging port controls. The 407V pack does not power that directly.)
 
 These auxiliary loads increase total energy consumption and can reduce the driving range.
 
