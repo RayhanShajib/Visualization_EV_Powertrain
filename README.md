@@ -83,6 +83,44 @@ Current at 135kW / 200kW = 332 A / 491 A
 DC charging 10-80% = Approx. 31 minute
 AC charging 0-100%(Usable) = Approx. 4 hour 16 minute
 
+
+
+
+```text
++-------------------------------------------------------------------+
+|                        1. POWER INPUT                             |
+|                    HIGH-VOLTAGE BATTERY                           |
++-------------------------------------------------------------------+
+                                 |
+                                 |  [ Direct Current (DC) ]
+                                 v
++-------------------------------------------------------------------+
+|                     2. TRACTION INVERTER                          |
+|  * Converts DC -> 3-Phase AC using PWM Switches                   |
+|  * Controls Motor Speed   ---> by changing AC Frequency           |
+|  * Controls Motor Torque  ---> by changing AC Current             |
++-------------------------------------------------------------------+
+                                 |
+                                 |  [ 3-Phase AC Current ]
+                                 v
++-------------------------------------------------------------------+
+|                      3. ELECTRIC MOTOR                            |
+|                                                                   |
+|   [ STATOR ]  Outer Stationary Windings                           |
+|               └─> AC creates a Rotating Magnetic Field (RMF)        |
+|                                                                   |
+|   [ ROTOR ]   Inner Rotating Shaft with Magnets                   |
+|               └─> Pulled by RMF -> Creates ROTATION & TORQUE      |
++-------------------------------------------------------------------+
+                                 |
+                                 |  [ Mechanical Rotation ]
+                                 v
++-------------------------------------------------------------------+
+|                       4. POWER OUTPUT                             |
+|                      REDUCTION GEARBOX                            |
++-------------------------------------------------------------------+
+```
+
            
 
 
