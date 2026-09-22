@@ -145,6 +145,11 @@ AC charging 0-100%(Usable) = Approx. 4 hour 16 minute
 <img width="800" height="600" alt="oSobgcMlYnns2PwhHLF6nqvhcVGvVHhfbh0Hodj5ZTU5mGYm1gDeecdZZcUys93eUCfOfEjXwMSrGfFUcsET865axTNW5xOmsi78qyL8UE4m_cKla8eIKu_l7VZyn3wQDLIaTQXhkt7JxmiGl1x4dPfk5Yfa5UQP68lYHwckXq8" src="https://github.com/user-attachments/assets/78ff5733-6049-4b06-b3f2-3c41d61ac272" />
 
 
+# Polestar 4
+
+<img width="800" height="600" alt="oSobgcMlYnns2PwhHLF6nqvhcVGvVHhfbh0Hodj5ZTU5mGYm1gDeecdZZcUys93eUCfOfEjXwMSrGfFUcsET865axTNW5xOmsi78qyL8UE4m_cKla8eIKu_l7VZyn3wQDLIaTQXhkt7JxmiGl1x4dPfk5Yfa5UQP68lYHwckXq8" src="https://github.com/user-attachments/assets/297e5d09-2cf3-4b47-bbf7-021d2faf1b3e" />
+
+
 
 
 
