@@ -220,6 +220,13 @@ High-Voltage Battery
 - Optimize auxiliary power consumption
 
 
+# Week 2:
+
+
+
+
+
+
 # Polestar 4
 
 <img width="1536" height="1024" alt="WhatsApp Image 2026-09-22 at 12 28 52" src="https://github.com/user-attachments/assets/adbcbab3-293c-4c35-b20c-f923272ea24c" />
