@@ -235,13 +235,13 @@ High-Voltage Battery
 1. HV Distribution System
 Power Distribution Unit (PDU) / Junction Box: Acts as the main breaker box, routing DC power from the battery to key subsystems:
 
-Traction Inverter & Motor: Primary high-current path.
+* Traction Inverter & Motor: Primary high-current path.
 
-On-Board Charger (OBC) & DC Fast Charge Port: Charging pathways.
+* On-Board Charger (OBC) & DC Fast Charge Port: Charging pathways.
 
-Auxiliaries: DC-DC Converter (downsteps HV to 12V), Electric AC Compressor, and Cabin Heater.
+* Auxiliaries: DC-DC Converter (downsteps HV to 12V), Electric AC Compressor, and Cabin Heater.
 
-Orange Shielded Cables: Standardized color code designating lethal high-voltage lines, equipped with metallic shielding to prevent electromagnetic interference (EMI).
+# Orange Shielded Cables: Standardized color code designating lethal high-voltage lines, equipped with metallic shielding to prevent electromagnetic interference (EMI).
 
 
 
