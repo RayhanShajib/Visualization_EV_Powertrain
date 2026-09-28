@@ -220,7 +220,7 @@ High-Voltage Battery
 - Optimize auxiliary power consumption
 
 
-# Week 2:
+# #Week 2:
 
 
 
