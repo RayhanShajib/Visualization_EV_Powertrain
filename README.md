@@ -241,8 +241,18 @@ Power Distribution Unit (PDU) / Junction Box: Acts as the main breaker box, rout
 
 * Auxiliaries: DC-DC Converter (downsteps HV to 12V), Electric AC Compressor, and Cabin Heater.
 
-# Orange Shielded Cables: Standardized color code designating lethal high-voltage lines, equipped with metallic shielding to prevent electromagnetic interference (EMI).
+* Orange Shielded Cables: Standardized color code designating lethal high-voltage lines, equipped with metallic shielding to prevent electromagnetic interference (EMI).
+2. Protection & Safety Mechanisms
+* [ Battery Cells ] ──► [ Pyrofuse ] ──► [ HV Contactors ] ──► [ HVIL System ] ──► [ PDU / Load ]
+*HV Contactors (High-Voltage Relays): Electromagnetic switches at the positive and negative battery terminals. Controlled by the Battery Management System (BMS) to completely isolate battery voltage when the car is OFF or in an emergency.
 
+*Pre-charge Circuit: Charges the inverter's large capacitors through a resistor first to prevent high inrush currents from welding the main contactors shut.
+
+*Pyrofuse (Pyrotechnic Disconnect): Uses a tiny explosive charge triggered by airbag sensors to permanently blow and disconnect the battery within milliseconds during a severe collision.
+
+*High-Voltage Interlock Loop (HVIL): A low-voltage monitoring loop running through all HV connectors. If any plug or service hatch is opened, HVIL snaps the loop and forces contactors open instantly to protect technicians.
+
+*Insulation Monitoring Device (IMD): Continuously measures resistance between HV lines and the vehicle chassis to detect ground faults or insulation leaks, cutting power if a leak is found.
 
 
 
