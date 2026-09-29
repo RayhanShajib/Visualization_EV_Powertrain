@@ -309,8 +309,8 @@ High-Voltage Battery (DC)
 
 * Magnetic/EMI filter losses: Small losses in inductors/filters used for EMI control.
 
-loss split (design‑dependent): conduction ~40–50%, switching ~30–40%, magnetic ~5–10%, auxiliary ~5–10%
-
 * Auxiliary losses: Gate drivers, control electronics, cooling pumps/fans powered from HV or 12 V.
+
+loss split (design‑dependent): conduction ~40–50%, switching ~30–40%, magnetic ~5–10%, auxiliary ~5–10%
 
 
