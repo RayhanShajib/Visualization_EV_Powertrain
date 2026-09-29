@@ -354,7 +354,13 @@ left and right drive wheels.
 * Cornering: During a turn, the outside wheel needs to rotate faster than
   the inside wheel because it travels a longer distance.
 
+inside_wheel_rpm = 800
+outside_wheel_rpm = 1000
+
+differential_rpm = (inside_wheel_rpm + outside_wheel_rpm) / 2
+
+print(differential_rpm)
+# 900 RPM
 ### Connection in the Drivetrain
 
 Differential → Half-shafts / CV joints → Left and Right Wheels
-
