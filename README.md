@@ -279,6 +279,27 @@ A standard traction inverter uses a three‑phase bridge with six power switches
 
 * Sensors & isolation
 
+## EV Powertrain: Inverter and Motor
+
+```text
+High-Voltage Battery (DC)
+        │
+        ▼
+   DC Link (capacitors)
+        │
+        ▼
+┌───────────────────────┐
+│    3-Phase Inverter   │  ← 6 switches (U/V/W, high/low side)
+│  (SiC MOSFET / IGBT)  │
+└──────────┬────────────┘
+           │
+           │ 3-Phase AC (PWM)
+           ▼
+      PMSM Motor
+           │
+           ▼
+   Reduction Gear → Wheels
+```
 
 
 
