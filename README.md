@@ -313,4 +313,28 @@ High-Voltage Battery (DC)
 
 loss split (design‑dependent): conduction ~40–50%, switching ~30–40%, magnetic ~5–10%, auxiliary ~5–10%
 
+## EV Powertrain Flow
+
+```text
+[Battery 407 V DC]
+        │
+        ▼
+   ┌─────────────┐
+   │  DC Link    │
+   └──────┬──────┘
+          │
+          ▼
+   ┌───────────────────┐
+   │ Traction Inverter │  ← DC → AC (drive) / AC → DC (regen)
+   │  6-switch bridge  │
+   │  PWM + FOC control│
+   └────────┬──────────┘
+            │ 3-Phase AC
+            ▼
+      [PMSM Motor]
+            │
+            ▼
+ [Reduction Gear 13.8:1] → [Wheels]
+```
+
 
