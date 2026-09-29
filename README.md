@@ -301,5 +301,14 @@ High-Voltage Battery (DC)
    Reduction Gear → Wheels
 ```
 
+## Where energy is lost:
+
+* Conduction losses: I²R losses when current flows through on‑state switches and diodes.
+
+* Switching losses: Energy lost each time a device turns on/off; depends on switching frequency, DC bus voltage, and device type.
+
+* Magnetic/EMI filter losses: Small losses in inductors/filters used for EMI control.
+
+* Auxiliary losses: Gate drivers, control electronics, cooling pumps/fans powered from HV or 12 V.
 
 
