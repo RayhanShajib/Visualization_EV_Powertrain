@@ -336,5 +336,25 @@ loss split (design‑dependent): conduction ~40–50%, switching ~30–40%, magn
             ▼
  [Reduction Gear 13.8:1] → [Wheels]
 ```
+## Differential
 
+The differential is part of the drivetrain and transfers torque to the
+left and right drive wheels.
+
+### Main Functions
+
+* Torque Distribution: Transfers torque to the left and right wheels.
+
+* Different Wheel Speeds: Allows the left and right wheels to rotate at
+  different speeds when the vehicle is turning.
+
+* Straight Driving: When driving straight, the left and right wheels
+  rotate at approximately the same speed.
+
+* Cornering: During a turn, the outside wheel needs to rotate faster than
+  the inside wheel because it travels a longer distance.
+
+### Connection in the Drivetrain
+
+Differential → Half-shafts / CV joints → Left and Right Wheels
 
