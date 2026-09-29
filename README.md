@@ -258,7 +258,26 @@ Power Distribution Unit (PDU) / Junction Box: Acts as the main breaker box, rout
 The traction inverter is the central power-electronic subsystem in an electric vehicle: it converts high-voltage DC from the battery into precisely modulated three-phase AC to command torque and speed in the traction motor, and reverses that energy flow during regenerative braking.
 
 ## What a traction inverter does:
+* DC → AC conversion
 
+* Torque/speed control
+
+* Regenerative braking
+
+* Protection & management
+
+## Core architecture (3‑phase bridge)
+A standard traction inverter uses a three‑phase bridge with six power switches (two per phase: high‑side and low‑side).
+
+* Power stage
+
+* Gate drivers
+
+* DC link
+
+* Control unit (MCU)
+
+* Sensors & isolation
 
 
 
