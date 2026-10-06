@@ -364,3 +364,42 @@ print(differential_rpm)
 ### Connection in the Drivetrain
 
 Differential → Half-shafts / CV joints → Left and Right Wheels
+
+
+## Auxiliary Power
+
+### Components
+
+| Component | Role |
+|---|---|
+| HV battery (400V) | Main pack; supplies both drive motors and auxiliary systems |
+| DC-DC converter | Steps 400V down to 12V so low-voltage parts of the car can run off the main pack |
+| 12V battery (AGM, 50Ah) | Buffer keeping lights, screens, and control systems powered |
+| Low-voltage loads | Lights, infotainment, displays, control electronics — draw from the 12V system |
+| HV auxiliary loads | AC/heater, cooling pumps and fans — draw directly from the 400V bus through their own power electronics |
+
+### Diagram
+
+<img width="600" alt="Auxiliary Power System" src="https://github.com/user-attachments/assets/07812cf4-66b1-4bf0-8b41-c244dbce2dcd" />
+
+
+```mermaid
+flowchart TD
+    A[HV battery<br/>400V, 100 kWh pack] --> B[HV auxiliary loads<br/>AC/heater, cooling pumps]
+    A --> C[DC-DC converter<br/>400V to 12V step-down]
+    C --> D[12V battery<br/>AGM, 50Ah buffer]
+    D --> E[Low-voltage loads<br/>Lights, displays, electronics]
+```
+
+### Calculation
+
+Energy used by heating = Power × Duration
+
+`2 kW × 1 h = 2 kWh`
+
+### References
+
+- 12V battery specs: [Polestar owner's manual](https://www.polestar.com/au/manual/polestar-4-suv/2027/0ed816eed33d98cac0a8cc377bc12bc7-4797cf99d440898dc0a8cc37413638e8-8664b2fa77a7e089c0a8296870d1a409/)
+- WLTP consumption, coupe (dual/rear motor): [Polestar official spec page](https://www.polestar.com/uk/polestar-4-models/polestar-4-coupe/specifications/)
+- EPA consumption: [Polestar official US spec page](https://www.polestar.com/us/polestar-4/specifications/)
+- WLTP consumption, SUV (dual/rear motor): [evkx.net](https://evkx.net/models/polestar/4/4_suv_dual_motor/specifications/) — third-party aggregator
