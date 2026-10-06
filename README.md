@@ -380,15 +380,24 @@ Differential → Half-shafts / CV joints → Left and Right Wheels
 
 ### Diagram
 
-<img width="600" alt="Auxiliary Power System" src="https://github.com/user-attachments/assets/07812cf4-66b1-4bf0-8b41-c244dbce2dcd" />
-
-
 ```mermaid
 flowchart TD
-    A[HV battery<br/>400V, 100 kWh pack] --> B[HV auxiliary loads<br/>AC/heater, cooling pumps]
-    A --> C[DC-DC converter<br/>400V to 12V step-down]
-    C --> D[12V battery<br/>AGM, 50Ah buffer]
-    D --> E[Low-voltage loads<br/>Lights, displays, electronics]
+    A("High-voltage battery — 400 V, 100 kWh pack")
+    B("HV auxiliary loads — AC/heater, cooling pumps")
+    C("DC–DC step-down converter — 400 V to 12 V")
+    D("Inverter (INV) — For AC/heater")
+    E("Cooling pump (CP) — Battery/motor cooling")
+    F("12 V battery — AGM, 50 Ah buffer")
+    G("AC / heater — Cabin climate")
+    H("Low-voltage loads — Lights, displays, electronics")
+
+    A --> B
+    A --> C
+    B --> D
+    B --> E
+    D --> G
+    C --> F
+    F --> H
 ```
 
 ### Calculation
