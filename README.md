@@ -215,7 +215,7 @@ This stop could recover about **0.178 kWh** under our assumptions. Actual recove
 
 #### Reference
 
-[Polestar 4 SUV — Official Specifications](https://www.polestar.com/global/polestar-4-models/polestar-4-suv/specifications/). Accessed 12 October 2026.
+[Polestar 4 SUV — Official Specifications](https://www.polestar.com/global/polestar-4-models/polestar-4-suv/specifications/).
 
 The source provides the Dual motor curb weight. The 5-second stopping time and 70% recovery fraction are illustrative assumptions, not Polestar-published values.
 
