@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Polestar 4 powertrain: click a box</title>
+<style>
+:root{--bg:#F4F6F7;--card:#fff;--ink:#16222D;--mute:#54626F;--line:#B9C4CC;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12181D;--card:#1B242B;--ink:#E8EEF2;--mute:#9BA9B4;--line:#3A4954}}
+:root[data-theme="dark"]{--bg:#12181D;--card:#1B242B;--ink:#E8EEF2;--mute:#9BA9B4;--line:#3A4954}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.5}
+main{max-width:1000px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:26px;margin:0 0 4px;font-weight:600}
+.hint{color:var(--mute);margin:0 0 14px;font-size:15px}
+.wrap{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:12px;overflow-x:auto}
+#main svg{max-width:100%;height:auto;display:block;margin:0 auto}
+#main .node{cursor:pointer}
+#main .node:hover rect{stroke-width:3px}
+.m{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:10;align-items:center;justify-content:center;padding:16px}
+.m.on{display:flex}
+.box{background:var(--card);border:1px solid var(--line);border-radius:8px;max-width:960px;width:100%;max-height:90vh;overflow:auto;padding:16px 20px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.top h2{margin:0;font-size:20px;font-weight:600}
+button{font:inherit;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:6px 14px;cursor:pointer}
+#cap{color:var(--mute);margin:6px 0 10px;font-size:15px}
+#det svg{max-width:100%;height:auto;display:block;margin:0 auto}
+</style></head>
+<body><main>
+<h1>Polestar 4 EV powertrain</h1>
+<p class="hint">Click any box to see what is inside it.</p>
+<div class="wrap"><div id="main"></div></div>
+</main>
+<div class="m" id="m" role="dialog" aria-modal="true"><div class="box">
+<div class="top"><h2 id="ttl"></h2><button id="x" aria-label="Close">Close</button></div>
+<p id="cap"></p><div id="det"></div></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+<script>
+var MAIN = `graph TD
+    ExtDC["DC Fast Charger<br/>10-80%: 135 kW<br/>Max: 200 kW"] -->|"DC Power (bypasses on-board charger)"| Battery
+    ExtAC["AC Charging Station<br/>Max 22 kW"] -->|AC Power| OBC["On-Board Charger<br/>AC to DC"]
+    OBC -->|DC Power| Battery
+    Battery["Battery Pack DC<br/>110 cells x 3.7 V = 407 V<br/>100 kWh total / 94 kWh usable"]
+    Battery -->|High Voltage DC| Inverter["Inverter / Motor Controller<br/>DC to AC, PWM"]
+    Inverter -->|3-Phase AC| Motor["Electric Motor (PMSM)<br/>343 Nm at shaft"]
+    Motor -->|Mechanical Rotation| Gearbox["Reduction Gear 13.8:1<br/>343 Nm x 13.8 = about 4,730 Nm"]
+    Gearbox --> Diff["Differential<br/>Splits torque left/right"]
+    Diff -->|"Half-shafts / CV joints"| Wheels["Wheels<br/>Car moves"]
+    Battery -->|High Voltage DC| DC_DC["DC-DC Converter<br/>HV to 12 V"]
+    DC_DC -->|12V DC| Aux["12 V Battery 50 Ah<br/>Lights / Screens / ECU"]
+    Cooling["Cooling System<br/>Coolant, pumps, heat exchangers"] --- Battery
+    Cooling --- Inverter
+    Cooling --- Motor
+    Control["Control System<br/>Sensors, torque and regen control"] --- Inverter
+    Wheels -.->|Deceleration Energy| Motor
+    Motor -.->|Regenerative AC| Inverter
+    Inverter -.->|Converted DC| Battery
+    style Battery fill:#f9f,stroke:#333,stroke-width:2px,color:#000
+    style Motor fill:#bbf,stroke:#333,stroke-width:2px,color:#000
+    style Inverter fill:#bfb,stroke:#333,stroke-width:2px,color:#000
+    style Cooling fill:#cff,stroke:#333,stroke-dasharray:5 5,color:#000
+    style Control fill:#ffd,stroke:#333,color:#000`;
+
+var CHG = ["Charging", "DC skips the on-board charger, so it can deliver more power than AC.",
+`graph LR
+    D["DC fast charger<br/>135 kW (10-80%)<br/>200 kW max<br/>332 A / 491 A"] -->|"AC to DC done outside the car"| B["Battery 407 V"]
+    A["AC station"] -->|"AC"| O["On-board charger<br/>22 kW max"] -->|"DC"| B
+    B --> T["DC 10-80%: about 31 min<br/>AC 0-100%: about 4 h 16 min"]
+    style B fill:#f9f,stroke:#333,color:#000`];
+
+var D = {
+Battery: ["Battery pack", "110 cells in series add up to 407 V. The safety chain sits between the cells and the loads.",
+`graph LR
+    C["110 cells<br/>3.7 V each"] --> P["Pack 407 V<br/>94 kWh usable<br/>6 kWh reserve"]
+    P --> F["Pyrofuse<br/>crash disconnect"] --> K["HV contactors<br/>BMS controlled"] --> U["PDU<br/>to inverter and loads"]
+    PC["Pre-charge<br/>limits inrush"] --> K
+    H["HVIL<br/>opens if plug removed"] --> K
+    I["IMD<br/>insulation fault check"] --> K
+    style P fill:#f9f,stroke:#333,color:#000`],
+Inverter: ["Traction inverter", "Converts battery DC into three-phase AC using six switches. In regen it works backwards.",
+`graph LR
+    B["Battery DC"] --> L["DC link<br/>capacitors"] --> S["6-switch bridge<br/>SiC MOSFET / IGBT"] -->|"3-phase AC, PWM"| M["PMSM motor"]
+    G["Controller (MCU)<br/>PWM + FOC<br/>gate drivers"] --> S
+    S -.->|"regen: AC to DC"| B
+    X["Losses: conduction 40-50%<br/>switching 30-40%<br/>magnetic 5-10%, auxiliary 5-10%"] --- S
+    style S fill:#bfb,stroke:#333,color:#000`],
+Motor: ["PMSM motor", "The stator makes a rotating magnetic field that drags the permanent-magnet rotor around.",
+`graph LR
+    A["3-phase AC<br/>from inverter"] --> S["Stator"] -->|"rotating magnetic field"| R["Rotor<br/>permanent magnets"] --> T["Shaft<br/>343 Nm"] --> G["Reduction gear"]
+    style R fill:#bbf,stroke:#333,color:#000`],
+Gearbox: ["Reduction gear", "A fixed 13.8:1 ratio multiplies torque.",
+`graph LR
+    M["Motor shaft<br/>343 Nm"] --> G["Reduction gear<br/>13.8 : 1"] -->|"343 x 13.8"| O["About 4,730 Nm"] --> D["Differential"]`],
+Diff: ["Differential", "Splits torque left and right and lets the wheels turn at different speeds.",
+`graph LR
+    G["Reduction gear"] --> D["Differential"]
+    D --> L["Left half-shaft<br/>CV joint"] --> LW["Left wheel"]
+    D --> R["Right half-shaft<br/>CV joint"] --> RW["Right wheel"]
+    N["Cornering example: inside 800 rpm,<br/>outside 1000 rpm, average 900 rpm"] --- D`],
+Wheels: ["Wheels and regenerative braking", "When braking, the car's momentum drives the motor as a generator and charges the battery.",
+`graph LR
+    W["Wheels"] --> C["Half-shafts<br/>CV joints"] --> D["Differential"] --> G["Reduction gear<br/>speed x 13.8"] --> M["Motor as generator<br/>AC"] --> I["Inverter<br/>AC to DC"] --> B["Battery"]
+    style B fill:#f9f,stroke:#333,color:#000`],
+DC_DC: ["12 V auxiliary system", "The 407 V pack does not power the lights and screens directly.",
+`graph LR
+    H["HV battery"] --> C["DC-DC converter<br/>HV to 12 V"] --> B["12 V AGM battery<br/>50 Ah buffer"] --> L["Lights<br/>Screens<br/>Control electronics"]
+    H --> A["HV auxiliary loads<br/>AC compressor, heater,<br/>pumps and fans"]`],
+Cooling: ["Cooling system", "Coolant, pumps and heat exchangers move heat away so parts stay efficient and safe.",
+`graph LR
+    P["Pumps + coolant"] --> X["Heat exchangers"]
+    P --> B["Battery"]
+    P --> I["Inverter"]
+    P --> M["Motor"]
+    B --> N["Helps fast charging<br/>and battery life"]`],
+Control: ["Control system", "Sensors tell the controller what is happening, and it decides how much power to send.",
+`graph LR
+    S["Sensors"] --> C["Controller"] -->|"torque command"| I["Inverter"] --> M["Motor"]
+    C --> R["Regenerative braking"]
+    C --> T["Thermal management"]`]
+};
+D.ExtDC = D.ExtAC = D.OBC = CHG;
+D.Aux = D.DC_DC;
+
+var dark = matchMedia("(prefers-color-scheme:dark)").matches;
+mermaid.initialize({startOnLoad:false, theme: dark ? "dark" : "default", securityLevel:"loose", flowchart:{useMaxWidth:true}});
+var n = 0;
+function draw(el, code){ return mermaid.render("g" + (++n), code).then(function(r){ el.innerHTML = r.svg; }); }
+function openD(k){
+  var d = D[k]; if(!d) return;
+  document.getElementById("ttl").textContent = d[0];
+  document.getElementById("cap").textContent = d[1];
+  document.getElementById("det").innerHTML = "";
+  document.getElementById("m").classList.add("on");
+  draw(document.getElementById("det"), d[2]);
+}
+function closeD(){ document.getElementById("m").classList.remove("on"); }
+document.getElementById("x").onclick = closeD;
+document.getElementById("m").onclick = function(e){ if(e.target === this) closeD(); };
+document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeD(); });
+draw(document.getElementById("main"), MAIN).then(function(){
+  document.querySelectorAll("#main g.node").forEach(function(g){
+    var m = /^flowchart-(.+)-\d+$/.exec(g.id || "");
+    if(m){ g.addEventListener("click", function(){ openD(m[1]); }); }
+  });
+});
+</script>
+</body></html>
