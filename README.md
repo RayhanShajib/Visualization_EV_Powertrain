@@ -159,6 +159,66 @@ flowchart LR
 5. **Motor** — acts as generator, produces AC
 6. **Battery and inverter** — AC converted back to DC, stored in battery
 
+### Regenerative Braking Calculation
+
+During braking, the motor acts as a generator and converts some of the car’s kinetic energy into electricity for the battery. The remaining energy is dissipated as heat. This follows the **law of conservation of energy**.
+
+#### Example: Stopping from 100 km/h
+
+We use a mass of **2,375 kg** for the Polestar 4 SUV Dual motor. We assume a **5-second stop** and **70% overall energy recovery**.
+
+**Kinetic energy:**
+
+```text
+v = 100 / 3.6 = 27.777... m/s
+
+KE = 0.5 × m × v²
+   = 0.5 × 2,375 × (100 / 3.6)²
+   ≈ 916,281 J
+   ≈ 0.2545 kWh
+```
+
+**Average braking power:**
+
+```text
+P_avg = KE / time
+      = 916,281 / 5
+      ≈ 183,256 W
+      ≈ 183.3 kW
+```
+
+**Estimated energy stored in the battery:**
+
+```text
+E_battery = 0.70 × KE
+          ≈ 641,397 J
+          ≈ 0.1782 kWh
+```
+
+**Dissipated energy:**
+
+```text
+E_dissipated = 0.30 × KE
+             ≈ 274,884 J
+             ≈ 0.0764 kWh
+```
+
+**Energy balance:**
+
+```text
+Initial kinetic energy = Stored battery energy + Dissipated energy
+
+916,281 J = 641,397 J + 274,884 J
+```
+
+This stop could recover about **0.178 kWh** under our assumptions. Actual recovery depends on battery conditions and the car’s regeneration limits. The **183.3 kW** value is total average braking power, not confirmed regenerative power.
+
+#### Reference
+
+[Polestar 4 SUV — Official Specifications](https://www.polestar.com/global/polestar-4-models/polestar-4-suv/specifications/). Accessed 12 October 2026.
+
+The source provides the Dual motor curb weight. The 5-second stopping time and 70% recovery fraction are illustrative assumptions, not Polestar-published values.
+
 # Cooling, Control and Auxiliary Power
 
 ## Cooling System
