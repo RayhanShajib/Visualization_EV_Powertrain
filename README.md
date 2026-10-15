@@ -469,7 +469,7 @@ Energy used by heating = Power × Duration
 
 `2 kW × 1 h = 2 kWh`
 
-# Polestar EV Powertrain Diagram
+# Polestar EV Powertrain Diagram ( Single Motor )
 ![EV Powertrain Diagram](EV_Powertrain_Diagram.png)
 
 
@@ -479,7 +479,3 @@ Energy used by heating = Power × Duration
 - WLTP consumption, coupe (dual/rear motor): [Polestar official spec page](https://www.polestar.com/uk/polestar-4-models/polestar-4-coupe/specifications/)
 - EPA consumption: [Polestar official US spec page](https://www.polestar.com/us/polestar-4/specifications/)
 - WLTP consumption, SUV (dual/rear motor): [evkx.net](https://evkx.net/models/polestar/4/4_suv_dual_motor/specifications/) — third-party aggregator
-
-## EV Powertrain Diagram
-
-![EV Powertrain Diagram](EV_Powertrain_Diagram.png)
