@@ -7,8 +7,8 @@ This project explores how an EV powertrain works and investigates ways to improv
 Understand the system, identify energy losses, establish baseline performance, and evaluate possible improvements.
 
 #Project Details
-Course: Designing and implementing data pipeline 
-Duration: _______
+Course: Designing and implementing data pipeline
+Duration: **\_\_\_**
 Supervisor: Leo & JP
 Vehicle / Model: Polestar 4
 
@@ -16,62 +16,62 @@ Vehicle / Model: Polestar 4
 Charging, battery, inverter, motor, mechanical drivetrain, regenerative braking, cooling and control systems.
 
 #Tools and Data
-Software and tools: 
-Specifications and data sources: 
+Software and tools:
+Specifications and data sources:
 
 #Expected Outcomes
 Powertrain diagrams, a baseline model or analysis, evaluation of efficiency improvements, and documented results.
 
-
 # Completed Work:
-Battery - the cars main battery is a lithium-ion pack made of 110 smaller cells connected together. Cells are connected in series so the voltages add up. Each cell is about 3.7 volt makes the whole pack equivalent of 407 volt. A higher voltage means the same power can be delivered with less current which keeps cables and components smaller and cooler. 
-Cells = 110
-* Nominal voltage = 407 V 
-* Total capacity = 100 kWh
-* Usable capacity = 94 kWh
-* DC charging (10% - 80%) = 135 kW
-* DC charging(Max.) = 200 kW
-* AC charging = 22 kW(Max.)
-* Separate battery = 12 V (separate small battery that runs the lights, screens and charging port controls. The 407V pack does not power that directly.)
-* Why is DC charging faster than AC charging- with DC the conversion from AC to DC is done in the big external charger, so the energy goes directly into the * battery. With AC, the cars own smaller onboard charger has do the conversion, so the power is limited. 
-* Mathematical Calculations:
-* V cell = V pack / N
-       = 407V / 110
-       = 3.7 V (Approx.)
-* Usable Energy:
-* Usable percentage = usable energy / total energy * 100
-                  = 94kWh / 100kWh * 100
-                  = 94%
-* Reserve = 100kWh - 94kWh
-        = 6kWh (this energy is reserved as buffer so that the battery life remain safe.)
-* Current during Fast Charging:
-* Formula: I = P / V
-* Working:
-* At 135kW: 135000W / 407V = 331.7A
-* At 200kW: 200000W / 407V = 491.4A
-* Charging Time from 10% to 80%(DC):
-* Formula: Energy = (80% - 10%) * Capacity, and t = E / P
-* Energy = 0.70 * 100kWh = 70kWh
-* t = 70kWh / 135kW = 0.519h = 31.1min
-* (If the usable energy is 94kWh than the approximate time is 29 minutes.)
-* AC charging time from 0% to 100%(Usable Energy)
-* Formula: t = E / P
-           = 94kWh / 22kW
-           = 4.27 Hour = 4 hour and 16 minutes
-* Summary of Results:
-* Voltage per cell = 3.7 V
-* Usable Share / Reserve = 94% / 6kWh
-* Capacity = 231Ah(Usable)
-* Current at 135kW / 200kW = 332 A / 491 A
-* DC charging 10-80% = Approx. 31 minute
-* AC charging 0-100%(Usable) = Approx. 4 hour 16 minute
 
+Battery - the cars main battery is a lithium-ion pack made of 110 smaller cells connected together. Cells are connected in series so the voltages add up. Each cell is about 3.7 volt makes the whole pack equivalent of 407 volt. A higher voltage means the same power can be delivered with less current which keeps cables and components smaller and cooler.
+Cells = 110
+
+- Nominal voltage = 407 V
+- Total capacity = 100 kWh
+- Usable capacity = 94 kWh
+- DC charging (10% - 80%) = 135 kW
+- DC charging(Max.) = 200 kW
+- AC charging = 22 kW(Max.)
+- Separate battery = 12 V (separate small battery that runs the lights, screens and charging port controls. The 407V pack does not power that directly.)
+- Why is DC charging faster than AC charging- with DC the conversion from AC to DC is done in the big external charger, so the energy goes directly into the \* battery. With AC, the cars own smaller onboard charger has do the conversion, so the power is limited.
+- Mathematical Calculations:
+- V cell = V pack / N
+  = 407V / 110
+  = 3.7 V (Approx.)
+- Usable Energy:
+- Usable percentage = usable energy / total energy _ 100
+  = 94kWh / 100kWh _ 100
+  = 94%
+- Reserve = 100kWh - 94kWh
+  = 6kWh (this energy is reserved as buffer so that the battery life remain safe.)
+- Current during Fast Charging:
+- Formula: I = P / V
+- Working:
+- At 135kW: 135000W / 407V = 331.7A
+- At 200kW: 200000W / 407V = 491.4A
+- Charging Time from 10% to 80%(DC):
+- Formula: Energy = (80% - 10%) \* Capacity, and t = E / P
+- Energy = 0.70 \* 100kWh = 70kWh
+- t = 70kWh / 135kW = 0.519h = 31.1min
+- (If the usable energy is 94kWh than the approximate time is 29 minutes.)
+- AC charging time from 0% to 100%(Usable Energy)
+- Formula: t = E / P
+  = 94kWh / 22kW
+  = 4.27 Hour = 4 hour and 16 minutes
+- Summary of Results:
+- Voltage per cell = 3.7 V
+- Usable Share / Reserve = 94% / 6kWh
+- Capacity = 231Ah(Usable)
+- Current at 135kW / 200kW = 332 A / 491 A
+- DC charging 10-80% = Approx. 31 minute
+- AC charging 0-100%(Usable) = Approx. 4 hour 16 minute
 
 # Inverter and Motor
 
 ```text
                  Inverter and Motor
-                         
+
         ┌───────────────────┐
         │   HIGH-VOLTAGE    │
         │      BATTERY      │
@@ -121,13 +121,12 @@ Cells = 110
              CAR MOVES
 ```
 
-
-           
 # PMSM Motor:
 
 <img width="800" height="600" alt="oSobgcMlYnns2PwhHLF6nqvhcVGvVHhfbh0Hodj5ZTU5mGYm1gDeecdZZcUys93eUCfOfEjXwMSrGfFUcsET865axTNW5xOmsi78qyL8UE4m_cKla8eIKu_l7VZyn3wQDLIaTQXhkt7JxmiGl1x4dPfk5Yfa5UQP68lYHwckXq8" src="https://github.com/user-attachments/assets/78ff5733-6049-4b06-b3f2-3c41d61ac272" />
 
 # Drivetrain and Regeneration (Gearbox, Differential, Braking Energy)
+
 <img width="970" height="437" alt="Screenshot 2026-09-22 153540" src="https://github.com/user-attachments/assets/52005354-9143-4462-bd2f-300e57a57551" />
 .
 <img width="707" height="352" alt="Screenshot 2026-09-22 154234" src="https://github.com/user-attachments/assets/2723b456-aa3c-4fc0-95b5-97856215d381" />
@@ -144,6 +143,7 @@ flowchart LR
 ```
 
 ### Driving: battery to wheels
+
 1. **Battery and inverter** — DC converted to AC
 2. **Motor** — spins, 343 Nm at shaft
 3. **Reduction gearbox** — 13.8:1 ratio, torque × 13.8 ≈ 4,730 Nm
@@ -152,6 +152,7 @@ flowchart LR
 6. **Wheel hub** — ~4,700 Nm here, turns the wheel
 
 ### Regen braking: wheels to battery
+
 1. **Wheel hub** — spun by the car's momentum
 2. **Half-shaft and CV joint** — carries that rotation back
 3. **Differential** — recombines rotation from both wheels
@@ -228,11 +229,11 @@ The Polestar 4 uses a thermal management system to control the temperature of th
 The system uses coolant, pumps and heat exchangers to move heat between different parts of the vehicle.
 
 Main purposes:
+
 - Keep the battery at a suitable operating temperature
 - Prevent the motor and inverter from overheating
 - Support fast charging
 - Improve efficiency and battery life
-
 
 ## Control System
 
@@ -244,12 +245,12 @@ Battery → Controller/Inverter → Motor → Wheels
 
 The control system receives information from sensors and decides how much power should be delivered to the motor. It also controls regenerative braking and thermal management.
 
-
 ## Auxiliary Power
 
 Not all battery energy is used to move the vehicle. Some energy is required by auxiliary systems.
 
 Examples:
+
 - Cabin heating and air conditioning
 - Cooling pumps and fans
 - Lights
@@ -260,17 +261,16 @@ Examples:
 
 These auxiliary loads increase total energy consumption and can reduce the driving range.
 
-
 ## Energy Flow
 
 High-Voltage Battery
-        │
-        ├──→ Inverter → Motor → Wheels
-        │
-        ├──→ Cooling / Thermal Management
-        │
-        │──→ Heating / Air Conditioning
-        
+│
+├──→ Inverter → Motor → Wheels
+│
+├──→ Cooling / Thermal Management
+│
+│──→ Heating / Air Conditioning
+
 ## Possible Efficiency Improvements
 
 - Better control of battery temperature
@@ -279,65 +279,66 @@ High-Voltage Battery
 - Precondition the battery and cabin while connected to a charger
 - Optimize auxiliary power consumption
 
-
-
-
 # Polestar 4
 
 <img width="1536" height="1024" alt="WhatsApp Image 2026-09-22 at 12 28 52" src="https://github.com/user-attachments/assets/adbcbab3-293c-4c35-b20c-f923272ea24c" />
 
 # #Week 2 Daily
-* The High-Voltage (HV) Distribution & Protection System safely channels high voltage (400V–800V DC) from the battery to power-hungry EV components while providing instant shut-off protection during faults or crashes.
+
+- The High-Voltage (HV) Distribution & Protection System safely channels high voltage (400V–800V DC) from the battery to power-hungry EV components while providing instant shut-off protection during faults or crashes.
 
 1. HV Distribution System
-Power Distribution Unit (PDU) / Junction Box: Acts as the main breaker box, routing DC power from the battery to key subsystems:
+   Power Distribution Unit (PDU) / Junction Box: Acts as the main breaker box, routing DC power from the battery to key subsystems:
 
-* Traction Inverter & Motor: Primary high-current path.
+- Traction Inverter & Motor: Primary high-current path.
 
-* On-Board Charger (OBC) & DC Fast Charge Port: Charging pathways.
+- On-Board Charger (OBC) & DC Fast Charge Port: Charging pathways.
 
-* Auxiliaries: DC-DC Converter (downsteps HV to 12V), Electric AC Compressor, and Cabin Heater.
+- Auxiliaries: DC-DC Converter (downsteps HV to 12V), Electric AC Compressor, and Cabin Heater.
 
-* Orange Shielded Cables: Standardized color code designating lethal high-voltage lines, equipped with metallic shielding to prevent electromagnetic interference (EMI).
+- Orange Shielded Cables: Standardized color code designating lethal high-voltage lines, equipped with metallic shielding to prevent electromagnetic interference (EMI).
 
 2. Protection & Safety Mechanisms
-* [ Battery Cells ] ──► [ Pyrofuse ] ──► [ HV Contactors ] ──► [ HVIL System ] ──► [ PDU / Load ]
 
-* HV Contactors (High-Voltage Relays): Electromagnetic switches at the positive and negative battery terminals. Controlled by the Battery Management System (BMS) to completely isolate battery voltage when the car is OFF or in an emergency.
+- [ Battery Cells ] ──► [ Pyrofuse ] ──► [ HV Contactors ] ──► [ HVIL System ] ──► [ PDU / Load ]
 
-* Pre-charge Circuit: Charges the inverter's large capacitors through a resistor first to prevent high inrush currents from welding the main contactors shut.
+- HV Contactors (High-Voltage Relays): Electromagnetic switches at the positive and negative battery terminals. Controlled by the Battery Management System (BMS) to completely isolate battery voltage when the car is OFF or in an emergency.
 
-* Pyrofuse (Pyrotechnic Disconnect): Uses a tiny explosive charge triggered by airbag sensors to permanently blow and disconnect the battery within milliseconds during a severe collision.
+- Pre-charge Circuit: Charges the inverter's large capacitors through a resistor first to prevent high inrush currents from welding the main contactors shut.
 
-* High-Voltage Interlock Loop (HVIL): A low-voltage monitoring loop running through all HV connectors. If any plug or service hatch is opened, HVIL snaps the loop and forces contactors open instantly to protect technicians.
+- Pyrofuse (Pyrotechnic Disconnect): Uses a tiny explosive charge triggered by airbag sensors to permanently blow and disconnect the battery within milliseconds during a severe collision.
 
-* Insulation Monitoring Device (IMD): Continuously measures resistance between HV lines and the vehicle chassis to detect ground faults or insulation leaks, cutting power if a leak is found.
+- High-Voltage Interlock Loop (HVIL): A low-voltage monitoring loop running through all HV connectors. If any plug or service hatch is opened, HVIL snaps the loop and forces contactors open instantly to protect technicians.
 
+- Insulation Monitoring Device (IMD): Continuously measures resistance between HV lines and the vehicle chassis to detect ground faults or insulation leaks, cutting power if a leak is found.
 
-# Traction Inverter: 
+# Traction Inverter:
+
 The traction inverter is the central power-electronic subsystem in an electric vehicle: it converts high-voltage DC from the battery into precisely modulated three-phase AC to command torque and speed in the traction motor, and reverses that energy flow during regenerative braking.
 
 ## What a traction inverter does:
-* DC → AC conversion
 
-* Torque/speed control
+- DC → AC conversion
 
-* Regenerative braking
+- Torque/speed control
 
-* Protection & management
+- Regenerative braking
+
+- Protection & management
 
 ## Core architecture (3‑phase bridge)
+
 A standard traction inverter uses a three‑phase bridge with six power switches (two per phase: high‑side and low‑side).
 
-* Power stage
+- Power stage
 
-* Gate drivers
+- Gate drivers
 
-* DC link
+- DC link
 
-* Control unit (MCU)
+- Control unit (MCU)
 
-* Sensors & isolation
+- Sensors & isolation
 
 ## EV Powertrain: Inverter and Motor
 
@@ -363,13 +364,13 @@ High-Voltage Battery (DC)
 
 ## Where energy is lost:
 
-* Conduction losses: I²R losses when current flows through on‑state switches and diodes.
+- Conduction losses: I²R losses when current flows through on‑state switches and diodes.
 
-* Switching losses: Energy lost each time a device turns on/off; depends on switching frequency, DC bus voltage, and device type.
+- Switching losses: Energy lost each time a device turns on/off; depends on switching frequency, DC bus voltage, and device type.
 
-* Magnetic/EMI filter losses: Small losses in inductors/filters used for EMI control.
+- Magnetic/EMI filter losses: Small losses in inductors/filters used for EMI control.
 
-* Auxiliary losses: Gate drivers, control electronics, cooling pumps/fans powered from HV or 12 V.
+- Auxiliary losses: Gate drivers, control electronics, cooling pumps/fans powered from HV or 12 V.
 
 loss split (design‑dependent): conduction ~40–50%, switching ~30–40%, magnetic ~5–10%, auxiliary ~5–10%
 
@@ -396,6 +397,7 @@ loss split (design‑dependent): conduction ~40–50%, switching ~30–40%, magn
             ▼
  [Reduction Gear 13.8:1] → [Wheels]
 ```
+
 ## Differential
 
 The differential is part of the drivetrain and transfers torque to the
@@ -403,15 +405,15 @@ left and right drive wheels.
 
 ### Main Functions
 
-* Torque Distribution: Transfers torque to the left and right wheels.
+- Torque Distribution: Transfers torque to the left and right wheels.
 
-* Different Wheel Speeds: Allows the left and right wheels to rotate at
+- Different Wheel Speeds: Allows the left and right wheels to rotate at
   different speeds when the vehicle is turning.
 
-* Straight Driving: When driving straight, the left and right wheels
+- Straight Driving: When driving straight, the left and right wheels
   rotate at approximately the same speed.
 
-* Cornering: During a turn, the outside wheel needs to rotate faster than
+- Cornering: During a turn, the outside wheel needs to rotate faster than
   the inside wheel because it travels a longer distance.
 
 inside_wheel_rpm = 800
@@ -420,23 +422,24 @@ outside_wheel_rpm = 1000
 differential_rpm = (inside_wheel_rpm + outside_wheel_rpm) / 2
 
 print(differential_rpm)
+
 # 900 RPM
+
 ### Connection in the Drivetrain
 
 Differential → Half-shafts / CV joints → Left and Right Wheels
-
 
 ## Auxiliary Power
 
 ### Components
 
-| Component | Role |
-|---|---|
-| HV battery (400V) | Main pack; supplies both drive motors and auxiliary systems |
-| DC-DC converter | Steps 400V down to 12V so low-voltage parts of the car can run off the main pack |
-| 12V battery (AGM, 50Ah) | Buffer keeping lights, screens, and control systems powered |
-| Low-voltage loads | Lights, infotainment, displays, control electronics — draw from the 12V system |
-| HV auxiliary loads | AC/heater, cooling pumps and fans — draw directly from the 400V bus through their own power electronics |
+| Component               | Role                                                                                                    |
+| ----------------------- | ------------------------------------------------------------------------------------------------------- |
+| HV battery (400V)       | Main pack; supplies both drive motors and auxiliary systems                                             |
+| DC-DC converter         | Steps 400V down to 12V so low-voltage parts of the car can run off the main pack                        |
+| 12V battery (AGM, 50Ah) | Buffer keeping lights, screens, and control systems powered                                             |
+| Low-voltage loads       | Lights, infotainment, displays, control electronics — draw from the 12V system                          |
+| HV auxiliary loads      | AC/heater, cooling pumps and fans — draw directly from the 400V bus through their own power electronics |
 
 ### Diagram
 
@@ -476,3 +479,7 @@ Energy used by heating = Power × Duration
 - WLTP consumption, coupe (dual/rear motor): [Polestar official spec page](https://www.polestar.com/uk/polestar-4-models/polestar-4-coupe/specifications/)
 - EPA consumption: [Polestar official US spec page](https://www.polestar.com/us/polestar-4/specifications/)
 - WLTP consumption, SUV (dual/rear motor): [evkx.net](https://evkx.net/models/polestar/4/4_suv_dual_motor/specifications/) — third-party aggregator
+
+## EV Powertrain Diagram
+
+![EV Powertrain Diagram](EV_Powertrain_Diagram.png)
