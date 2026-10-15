@@ -467,7 +467,7 @@ Energy used by heating = Power × Duration
 `2 kW × 1 h = 2 kWh`
 
 # Polestar EV Powertrain Diagram
-<img width="1536" height="1024" alt="WhatsApp Image 2026-09-22 at 12 28 52" src="https://github.com/user-attachments/assets/adbcbab3-293c-4c35-b20c-f923272ea24c" />
+![EV Powertrain Diagram](EV_Powertrain_Diagram.png)
 
 
 ### References
