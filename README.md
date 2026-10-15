@@ -466,6 +466,10 @@ Energy used by heating = Power × Duration
 
 `2 kW × 1 h = 2 kWh`
 
+# Polestar EV Powertrain Diagram
+<img width="1536" height="1024" alt="WhatsApp Image 2026-09-22 at 12 28 52" src="https://github.com/user-attachments/assets/adbcbab3-293c-4c35-b20c-f923272ea24c" />
+
+
 ### References
 
 - 12V battery specs: [Polestar owner's manual](https://www.polestar.com/au/manual/polestar-4-suv/2027/0ed816eed33d98cac0a8cc377bc12bc7-4797cf99d440898dc0a8cc37413638e8-8664b2fa77a7e089c0a8296870d1a409/)
